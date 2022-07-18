@@ -90,7 +90,8 @@ There is a child class of TreeSet, which will be responsible for storing and sor
 
 Calculation of min/max values is trivial.
 
-There is also some optimization for MA calculation, though it's an overkill — it will be important only at a very large N (but who needs AM for 100000 days?)
+There is also some optimization for MA calculation, though it's an overkill — it will be important only at a very large N, but who needs AM for 100000 days?  
+(Just assumed that this is implicitly required by the first mention at the meeting)
 
 The total performance complexity is the same as memory: O(n).
 The MA calculation won't exceed that — although the loop statement is nested, the total number of operations cannot be greater than the records number (by definition).
