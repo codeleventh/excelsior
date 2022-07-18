@@ -77,3 +77,26 @@ So you should print:
 09.01.2022: 15.00  
 10.01.2022: 16.00
 ```  
+
+## The solution
+
+First of all: we don't care how big the input file is. We read it by lines, and it has a memory consumption that grows in linear way.
+Also, we don't have a strong need to save memory (there are not so many stocks in the real world, a few thousand at most), we can sacrifice some amount to improve readability instead.
+
+Second, the data isn't sorted (I'm not sure if that happens IRL). Sorting would make the solution much easier, but we won't do that — it will increase the complexity to n log n instantly.
+
+Here is the solution: we will remember N + M most recent tuples (date, priceClose) for each ticker, which will be used to calculate MA.
+There is a child class of TreeSet, which will be responsible for storing and sorting our data. It has O(log n) for insertion and a limited capacity.
+
+Calculation of min/max values is trivial.
+
+There is also some optimization for MA calculation, though it's an overkill — it will be important only at a very large N (but who needs AM for 100000 days?)
+
+The total performance complexity is the same as memory: O(n).
+The MA calculation won't exceed that — although the loop statement is nested, the total number of operations cannot be greater than the records number (by definition).
+
+BTW, the situation with missing data is still possible, for example, when M or N is greater than a total number of ticker records.
+For this case, I decided to output as many numbers as possible.
+
+NB: I used Lombok in a project and since it doesn't add any data structures and utils, but only reduces the boilerplate, I do not consider it as a violation :>
+
