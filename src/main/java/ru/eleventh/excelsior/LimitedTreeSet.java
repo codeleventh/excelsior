@@ -1,4 +1,4 @@
-package ru.eleventh.gte;
+package ru.eleventh.excelsior;
 
 import lombok.AllArgsConstructor;
 

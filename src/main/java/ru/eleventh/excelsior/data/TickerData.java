@@ -1,7 +1,7 @@
-package ru.eleventh.gte.data;
+package ru.eleventh.excelsior.data;
 
 import lombok.Data;
-import ru.eleventh.gte.LimitedTreeSet;
+import ru.eleventh.excelsior.LimitedTreeSet;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;

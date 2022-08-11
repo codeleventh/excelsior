@@ -1,12 +1,12 @@
-package ru.eleventh.gte;
+package ru.eleventh.excelsior;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.val;
-import ru.eleventh.gte.data.CsvRecord;
-import ru.eleventh.gte.data.DayPrice;
-import ru.eleventh.gte.data.TickerData;
+import ru.eleventh.excelsior.data.CsvRecord;
+import ru.eleventh.excelsior.data.DayPrice;
+import ru.eleventh.excelsior.data.TickerData;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

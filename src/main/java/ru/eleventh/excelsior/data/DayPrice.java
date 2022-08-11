@@ -1,4 +1,4 @@
-package ru.eleventh.gte.data;
+package ru.eleventh.excelsior.data;
 
 import lombok.Data;
 

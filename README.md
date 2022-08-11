@@ -1,4 +1,4 @@
-# Assigment task
+# Excelsior assigment task
 
 ## The Problem
 
@@ -93,11 +93,11 @@ Calculation of min/max values is trivial.
 There is also some optimization for MA calculation, though it's an overkill — it will be important only at a very large N, but who needs AM for 100000 days?  
 (Just assumed that this is implicitly required by the first mention at the meeting)
 
-The total performance complexity is the same as memory: O(n).
+The total performance complexity: O(n log n).
 The MA calculation won't exceed that — although the loop statement is nested, the total number of operations cannot be greater than the records number (by definition).
 
 BTW, the situation with missing data is still possible, for example, when M or N is greater than a total number of ticker records.
 For this case, I decided to output as many numbers as possible.
 
-NB: I used Lombok in a project and since it doesn't add any data structures and utils, but only reduces the boilerplate, I do not consider it as a violation :>
-
+**NB**: I used Lombok in a project and since it doesn't add any data structures and utils, but only reduces the boilerplate, I do not consider it as a violation.   
+Also, there is no instructions how to launch the program, so Nikolay cannot run it :))))
